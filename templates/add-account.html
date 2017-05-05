@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Home Page Player</title>
+<link href="../static/css/responsive.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/source-sans-pro:n2,n4,n6:default.js" type="text/javascript"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+  <div id="logo">
+    <a href="player-home.html"><img href="player-home.html" src="../static/img/logo.png"></a>
+  </div>
+   
+	</header>
+  	
+   	<div class="container">
+   	<ul>
+  <li><a href="{{ url_for('player_hm') }}">Overview</a></li>
+  <li><a href="{{ url_for('transac') }}">Transactions</a></li>
+  <li class="dropdown">
+    <a href="{{ url_for('bdg') }}" class="dropbtn">Budgets</a>
+    <div class="dropdown-content">
+      <a href="{{ url_for('new_bdg') }}">Create New Budget</a>
+    </div>
+  </li>
+  <li><a href="{{ url_for('add_acct')}}">Add Account</a></li>
+</ul>
+</div>
+<div id="budgets">
+    <h3>Add Account</h3>
+   <div id="new-budget">
+  <form action="" method="post">
+   <label for="acc-num">Account Number</label>
+    <input type="text" id="acc-num" name="acc-num" placeholder="Account Number">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Account Password">
+    <label for="acc-name">Name of Account</label>
+    <input type="text" id="acc-name" name="acc-name" placeholder="Checking, Savings, etc.">
+    
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+    
+   
+	</div>
+
+  <footer>
+    <p>© Copyright 2016–17</p>
+  </footer>
+  <script type="text/javascript" src="js/menu.js"></script> 
+</body>
+</html>
